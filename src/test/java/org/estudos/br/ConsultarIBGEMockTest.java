@@ -20,7 +20,7 @@ public class ConsultarIBGEMockTest {
     private HttpURLConnection connectionMock;
 
     //JSON
-    private static final String JSON_RESPONSE = "[{\"id\":35,\"sigla\":\"SP\",\"nome\":\"São Paulo\",\"regiao\":{\"id\":3,\"sigla\":\"SE\",\"nome\":\"Sudeste\"}}, {\"id\":33,\"sigla\":\"RJ\",\"nome\":\"Rio de Janeiro\",\"regiao\":{\"id\":3,\"sigla\":\"SE\",\"nome\":\"Sudeste\"}}]";
+    private static final String JSON_RESPONSE = "[{\"id\":31,\"sigla\":\"MG\",\"nome\":\"Minas Gerais\",\"regiao\":{\"id\":3,\"sigla\":\"SE\",\"nome\":\"Sudeste\"}},{\"id\":32,\"sigla\":\"ES\",\"nome\":\"Espírito Santo\",\"regiao\":{\"id\":3,\"sigla\":\"SE\",\"nome\":\"Sudeste\"}},{\"id\":33,\"sigla\":\"RJ\",\"nome\":\"Rio de Janeiro\",\"regiao\":{\"id\":3,\"sigla\":\"SE\",\"nome\":\"Sudeste\"}},{\"id\":35,\"sigla\":\"SP\",\"nome\":\"São Paulo\",\"regiao\":{\"id\":3,\"sigla\":\"SE\",\"nome\":\"Sudeste\"}}]";
 
 
 
@@ -38,7 +38,7 @@ public class ConsultarIBGEMockTest {
     @DisplayName("Consulta usando o Mock para estados de uma região específica")
     public void testConsultarEstadosRegiaoComMock() throws IOException {
 
-        int id = 3;
+        int id = 35;
 
         String response = ConsultaIBGE.consultarEstadosRegiao(id);
 
